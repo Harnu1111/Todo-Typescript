@@ -29,8 +29,24 @@ li{
     padding: 10px;
     width: 100%;
     margin-left: -2.5em;
-    
+    display: flex;
+    position: relative;
 }
+
+.deleteBtn{
+      border: none;
+    background-image: linear-gradient(to right, rgb(165, 26, 49), rgb(15, 1, 24));
+    color: red ;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    right: 0;
+}
+
+
 
 .todo h1,h3{
     /* position: absolute; */
@@ -59,3 +75,4 @@ color:#959a9e;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
