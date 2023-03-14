@@ -5,7 +5,6 @@ const list = document.getElementById("list");
 btn.addEventListener("click", (e) => {
   e.preventDefault(false);
 
- 
   const task = document.createElement("li");
   const item = document.createElement("item");
   const label = document.createElement("label");
@@ -16,28 +15,23 @@ btn.addEventListener("click", (e) => {
 
   deletebtn.innerHTML = "Delete";
   deletebtn.classList.add("deleteBtn");
-  
 
   item.innerHTML = input.value;
-  label.append(check, item, deletebtn)
-task.append(label)
+  label.append(check, item, deletebtn);
+  task.append(label);
   list.append(task);
 
-  
-deletebtn.addEventListener("click", () => {
-  task.remove()
-})
+  deletebtn.addEventListener("click", () => {
+    task.remove();
+  });
 
-  check.addEventListener("change", () => { 
-    if(check.checked){
-   task.style.textDecoration = "line-through";}
-   else {
-     task.style.textDecoration = "none";
-   }
-  })
- 
+  check.addEventListener("change", () => {
+    if (check.checked) {
+      task.style.textDecoration = "line-through";
+    } else {
+      task.style.textDecoration = "none";
+    }
+  });
 
-  input.value="";
+  input.value = "";
 });
-
- 
